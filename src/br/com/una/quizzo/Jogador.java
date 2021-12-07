@@ -1,99 +1,80 @@
+/*
+Classe Jogadpr
+ */
 package br.com.una.quizzo;
 
-public class Jogador {
-	
-	private int idJogador;
+import java.util.Scanner;
+
+/**
+ *
+ * @author debora.goncalves
+ */
+public class Jogador extends Personagens {
+	static Scanner input = new Scanner(System.in);
+
 	private String nome;
 	private String apelido;
 	private String email;
 	private String telefone;
-	
-	public Jogador(int idJogador, String nome, String apelido, String email, String telefone) {
-		super();
-		this.idJogador = idJogador;
-		this.nome = nome;
-		this.apelido = apelido;
-		this.email = email;
-		this.telefone = telefone;
-	}
+	private String n;
 
-	public int getIdJogador() {
-		return idJogador;
-	}
-
-	public void setIdJogador(int idJogador) {
-		this.idJogador = idJogador;
+	public Jogador(String n) {        
+		this.n = n;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
 	public String getApelido() {
 		return apelido;
-	}
-
-	public void setApelido(String apelido) {
-		this.apelido = apelido;
 	}
 
 	public String getEmail() {
 		return email;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
 	public String getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+	// public void setIdJogador() {
+	//     this.idJogador = idJogador;
+	// }
+
+	public void setNome() {        
+		System.out.printf("Informe o seu nome %s:\n>> ",this.n);		
+		this.nome = input.nextLine();
 	}
-	
-	public boolean iniciarPartida() {  // TODO Implementar método
-		return true;
+
+	public void setApelido() {
+		System.out.printf("Informe seu apelido %s:\n>> ",this.n);
+		this.apelido = input.nextLine();
 	}
-	
-	public boolean escolherPersonagem() {  // TODO Implementar método
-		return true;
+
+	public void setEmail() {
+		System.out.printf("Informe seu email %s:\n>> ",this.n);
+		this.email = input.nextLine();
 	}
-	
-	public boolean acessarMenuInicial() {  // TODO Implementar método
-		return true;
+
+	public void setTelefone() {
+		System.out.printf("Informe seu telefone %s:\n>> ",this.n);
+		this.telefone = input.nextLine();
 	}
-	
-	public boolean responderPergunta() {  // TODO Implementar método
-		return true;
+
+	public void Cadastro(){
+		this.setNome();
+		this.setApelido();
+		this.setEmail();        
+		this.setTelefone();
 	}
-	
-	public boolean selecionarAlternativa() {  // TODO Implementar método
-		return true;
+
+	public void show(){
+		System.out.println("<<show:>>\n"+"\nNome = "+
+				this.getNome()+"\nApelido = "+ 
+				this.getApelido()+"\nEmail = "+
+				this.getEmail()+"\nTelefone = "+
+				this.getTelefone());
 	}
-	
-	public boolean fazCadastroJogador() {  // TODO Implementar método
-		return true;
-	}
-	
-	public String getPersonagemId() {  // TODO Implementar método
-		return "";
-	}
-	
-	public String setPartidaId(String idPartida) {  // TODO Implementar método
-		return idPartida;
-	}
-	
-	public String getPerguntaId() {  // TODO Implementar método
-		return "";
-	}
-	
-	public String getAlternativaId( ) {  // TODO Implementar método
-		return "";
-	}
+
 }
