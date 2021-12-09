@@ -1,7 +1,10 @@
 # Quizzo
-Repositório do jogo de perguntas a respostas Quizzo.
 
+Repositório do jogo de perguntas a respostas **Quizzo**.
 
+## Objetivo
+
+Os jogadores poderão testar suas habilidades, ganhando aquele que acertar mais perguntas. Para desenvolvimento do Software, a equipe trabalhou com Metodologia ágil seguindo os 3 pilares fundamentais do Scrum, como transparência, inspeção e adaptação. O Quizzo, foi desenvolvido na linguagem de programação Java, seguindo os conceitos de Programação Orientada a Objetos.
 
 ## Alunos
 
